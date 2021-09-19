@@ -1,0 +1,15 @@
+# Decrease in chance of ghost spawning per night
+ghosts.chance_reduction_per_night (Ghosts Chance reduction per night) float 0.5 0.000000 1.000000
+[*ghosts.fallback_resolution]
+# Fallback resolution width
+ghosts.fallback_resolution.1 (Ghosts Fallback resolution 1) float 64
+# Fallback resolution height
+ghosts.fallback_resolution.2 (Ghosts Fallback resolution 2) float 64
+# Whether to always resize textures to the given fallback dimensions. Guarantees support for arbitrary resolution texture packs. If this is not set, texture packs with a resolution lower than the server texture resolution won't work at all; texture packs with a multiple of said resolution will work well, however. A resolution of 64x64 or lower is usually acceptable performance-wise.
+ghosts.force_fallback_resolution (Ghosts Force fallback resolution) bool false
+# How many nights it takes for a ghost to forget their victim
+ghosts.forget_duration_nights (Ghosts Forget duration nights) float 10
+# Particles per one metre (= node size)
+ghosts.particles_per_metre (Ghosts Particles per metre) float 10 1.000000 100.000000
+# Chance of a ghost spawning the first night
+ghosts.spawn_chance (Ghosts Spawn chance) float 1 0.000000 1.000000
