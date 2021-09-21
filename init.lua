@@ -40,7 +40,7 @@ end)
 
 local b3d_triangle_sets = setmetatable({}, {__index = function(self, filename)
 	local _, ext = modlib.file.get_extension(filename)
-	if ext:lower() ~= "b3d" then
+	if not ext or  ext:lower() ~= "b3d" then
 		-- Only B3D support currently
 		return
 	end
@@ -56,7 +56,6 @@ local b3d_triangle_sets = setmetatable({}, {__index = function(self, filename)
 		vertex.pos = mlvec.divide_scalar(vertex.pos, 10)
 	end
 	local triangle_sets = assert(mesh.triangle_sets)
-	assert(#triangle_sets == 1)
 	local func = modlib.func
 	-- Triangle sets by texture index
 	local tris_by_tex = {}
