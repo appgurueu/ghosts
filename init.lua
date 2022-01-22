@@ -171,7 +171,8 @@ local function spawn_ghost(params)
 	local rotation = get_rotation(vector.normalize(velocity))
 	-- TODO as modlib doesn't have matrix support yet, we have to use axis-angle rotation
 	-- which we obtain from Euler angles over quaternion representations
-	local axis, angle = modlib.quaternion.to_axis_angle(modlib.quaternion.from_euler_rotation(rotation))
+	local axis, angle = modlib.quaternion.to_axis_angle(
+		modlib.quaternion.from_euler_rotation(vector.multiply(rotation, -1)))
 
 	local disperse = params.disperse or 0
 
