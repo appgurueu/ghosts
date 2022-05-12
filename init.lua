@@ -45,7 +45,7 @@ local b3d_triangle_sets = setmetatable({}, {__index = function(self, filename)
 		return
 	end
 	local path = assert(media_paths[filename], filename)
-	local model = io.open(path, "r")
+	local model = io.open(path, "rb")
 	local character = assert(modlib.b3d.read(model))
 	assert(not model:read(1))
 	model:close()
@@ -288,6 +288,7 @@ local function spawn_ghosts()
 			if nights_passed >= conf.forget_duration_nights then
 				data:set(data.root.players[name], ghostname, nil)
 			elseif is_halloween or (math.random() <= conf.spawn_chance * conf.chance_reduction_per_night^nights_passed) then
+				-- TODO nothing happens the very first night? 3d_armor support doesn't seem to work?
 				-- Spread ghost spawning out across 10 seconds
 				-- TODO make this configurable
 				modlib.minetest.after(math.random() * 10, function()
