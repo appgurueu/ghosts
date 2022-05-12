@@ -88,7 +88,7 @@ local png_dimensions = setmetatable({}, {__index = function(self, filename)
 	if not media_path then
 		return
 	end
-	local file = io.open(media_path, "r")
+	local file = io.open(media_path, "rb")
 	if not file then
 		return
 	end
