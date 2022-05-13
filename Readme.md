@@ -83,6 +83,8 @@ Decrease in chance of ghost spawning per night
 
 * Type: number
 * Default: `0.5`
+* &gt;= `0`
+* &lt;= `1`
 
 ### `fallback_resolution`
 
@@ -121,6 +123,8 @@ Particles per one metre (= node size)
 
 * Type: number
 * Default: `10`
+* &gt;= `1`
+* &lt;= `100`
 
 ### `spawn_chance`
 
@@ -128,6 +132,8 @@ Chance of a ghost spawning the first night
 
 * Type: number
 * Default: `1`
+* &gt;= `0`
+* &lt;= `1`
 <!--modlib:conf-->
 
 ## API

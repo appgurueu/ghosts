@@ -4,22 +4,19 @@ return {
 		particles_per_metre = {
 			type = "number",
 			description = "Particles per one metre (= node size)",
-			min = 1,
-			max = 100,
+			range = {min = 1, max = 100},
 			default = 10
 		},
 		spawn_chance = {
 			type = "number",
 			description = "Chance of a ghost spawning the first night",
-			min = 0,
-			max = 1,
+			range = {min = 0, max = 1},
 			default = 1
 		},
 		chance_reduction_per_night = {
 			type = "number",
 			description = "Decrease in chance of ghost spawning per night",
-			min = 0,
-			max = 1,
+			range = {min = 0, max = 1},
 			default = 0.5
 		},
 		forget_duration_nights = {
